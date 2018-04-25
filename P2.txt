@@ -81,6 +81,89 @@ Today
 Give some examples using basic ng directives
 
 
+ng-bind ==== {{}}
+
+NaN -> Not a Number
+ng-init -> initialize a variable
+
+
+
+ng-XXX  Vx data-ng-XX
+-----------------------
+WFF ->Well Formed Formula
+-will give warning if you use ng-XXX
+
+
+
+JSON Object
+------------
+JSON -> Java Script Object Notation  - it is string
+
+<div ng-app="" ng-init="
+emp ={
+
+'id' : '101',
+'name' : 'Sathisj',
+'salary' : '50000',
+'mobile' : '98824432'
+
+}
+
+">
+Employee id :{{emp.id}}  <br>
+Employee id :{{emp.name}}<br>
+Employee id :{{emp.salary}}<br>
+Employee id :{{emp.mobile}}<br>
+
+How can we refer individual field/property
+{{emp.id}}
+
+
+JSONArray - Array of JSON Object
+
+
+
+employees = 
+[
+
+{'id' : '101'  ,  'name' :  ' Noorie ahmed',  'salary' : '30000'  },
+Mu
+{'id' : '102'  ,  'name' :  ' Mula Sukanya',  'salary' : '40000'  },
+
+{'id' : '103'  ,  'name' :  ' Abhishek',  'salary' : '50000'  },
+
+
+]
+
+How can you display  ( need to use loops )
+*ngFor - Angular 5
+ngRepeate - Angular 1.X
+
+<div ng-app="" ng-init="
+employees = 
+[
+
+{'id' : '101'  ,  'name' :  ' Noorie ahmed',  'salary' : '30000'  },
+
+{'id' : '102'  ,  'name' :  ' Mula Sukanya',  'salary' : '40000'  },
+
+{'id' : '103'  ,  'name' :  ' Abhishek',  'salary' : '50000'  }
+]
+
+">
+  <p>Looping with ng-repeat:</p>
+  <ul>
+    <li ng-repeat="e in employees">
+      {{ e.id +  " "  +  e.name + " " +  e.salary }}
+    </li>
+  </ul>
+</div>
+
+
+
+
+
+
 
 
 
