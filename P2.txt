@@ -1,0 +1,136 @@
+23/04/18 (11:00 to 1:00)
+--------
+Complete architecture
+Technoloies going use.
+
+Requirement document
+
+
+will share through git hub.
+
+
+Assignment
+-----------
+1)Read the requirement document - multiple times
+2)doubts - discuss
+3)You supposed to design yourself.
+	a)What you understood
+	b)Who are the users of this project
+		i)Internal User/External Users
+	c)What are the modules (single/two word)
+	d)Table structure
+	e)TestCases Document (Excel Sheet)
+
+Fill these templates
+
+Templates
+----------
+1)BRD(Business Requirement Document)
+2)Design Document
+3)Testcase Document.
+
+
+
+24/04/18
+--------
+Data binding
+-------------
+
+<input type = "text" name ="userID">
+Whatever you type in text field - will assinged to userID - One way
+Whatever the value there in the name -should display in text field
+
+
+${userID}->the value of userId will display in the ui
+
+$Scope -  we can achieve two way data binding.
+
+
+Directives
+----------
+ng-app
+ng-model
+ng-bind
+{{}}
+
+
+<html ng-app="">
+{{10+20}}
+
+</html>
+
+25/04/18
+-------
+Assignment
+-----------
+1)Please read the requirements
+2)Fill the Templates
+3)Learn Angular JS
+
+
+Yesterday
+---------
+1)Architecture
+2)SPA
+3)Two way binding
+4)Angular Directive - ng-app
+
+
+Today
+-------
+Give some examples using basic ng directives
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
