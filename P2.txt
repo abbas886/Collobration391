@@ -161,6 +161,149 @@ employees =
 
 
 
+26/04/18
+---------
+Modules and Controllers.
+
+
+Tables
+------
+Master tables  - will not change frequently
+	Ex:  Branch,  Department
+Transactional Tables - will change frequently
+        Ex:  Student,  Employee
+
+Parent Table: Branch,  Department
+Child Table  :  Student,  Employee
+
+References/Foriengn key(  1-to-many)
+
+Job - JobApplication ( many-tomany)
+N number of students can apply for the same job. (many-to-one)
+A student can apply more than one job (1 - to - many)
+many-to-many
+
+Assignment
+----------
+Please identify the fields of other tables
+and do gap analysis.
+
+
+Angular JS
+------------
+Directives with examples
+
+Today:
+------
+Module
+------
+<html ng-app="myApp" ng-controller="UserController">
+{{name}}
+</html>
+
+var app = angular.module("myApp",[]);
+
+Controller
+----------
+app.controller("UserController",function($scope)
+
+{
+
+$scope.name = "Sachin";
+
+}
+
+
+)
+
+Example:
+---------
+<div ng-app="myApp" ng-controller="empCtrl">
+
+Emp ID :    {{emp.id}}  <br>
+Emp Name :    {{emp.name}}  <br>
+Emp Salary :    {{emp.salary}}  <br>
+
+</div>
+
+<script>
+var app = angular.module("myApp", []);
+
+
+app.controller("empCtrl", function($scope) {
+
+ $scope.emp = {
+ "id" : "EMP005",
+ "name": "Jaskaran",
+ "salary": "360000"
+  
+ }
+  
+});
+</script>
+------------
+
+
+
+
+
+
+ 
+$scope -- Model / ModelAndView
+
+
+
+
+
+Different types of languages
+----------------------------
+1)Strctural  -  COBOL
+2)Procedural  - c
+3)Object Oriented = C++, Java
+4)Functional = Java script , Java(from 1.7 version onwards)
+		lamda expression  ( -> )
+
+A function can be assigned to a variable
+and can call the function with using this variable.
+
+
+var sum  =  add(int x, int y)
+{
+   return x+y;
+
+}
+
+//how can you call this function?
+
+sum(10,20)
+
+Example controller + with function - two way binding
+----------------------------------------------------
+<div ng-app="myApp" ng-controller="personCtrl">
+
+First Name: <input type="number" ng-model="x"><br>
+Last Name: <input type="number" ng-model="y"><br>
+<br>
+ {{message}}  : {{sum()}}
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('personCtrl', function($scope) {
+   
+    $scope.message = " The total is" ;
+    $scope.sum = function() {
+        return $scope.x  + $scope.y;
+    };
+});
+</script>
+----------------------------------------------------
+
+
+
+
+
 
 
 
