@@ -301,7 +301,57 @@ app.controller('personCtrl', function($scope) {
 ----------------------------------------------------
 
 
+27/04/18
+--------
+Yesterday
+---------
+1)Design document
+	a)Identified all the modues
+	b)Identified all the tables
+	c)Identified fields for User Table
+        d)Angular Controllers
 
+Today
+-----
+1)Design - Identify fields of other tables
+	
+	Identified fields of Bulletin, Job and JobApplication
+	-GAP Analysis
+
+2)filters, services(http)
+
+
+
+searching for the job using filter
+---------------------------------
+<body>
+
+<div ng-app="myApp" ng-controller="namesCtrl">
+
+<input type="text" ng-model="searchValue"
+
+<ul>
+  <li ng-repeat="job in jobs | filter: searchValue ">
+    {{ job.title + ', ' + job.salary }}
+  </li>
+</ul>
+
+</div>
+
+<script>
+angular.module('myApp', []).controller('namesCtrl', function($scope) {
+    $scope.jobs = [
+          { title : "Technical Lead", salary: 10000},
+           { title : "Technical Architect", salary: 50000},
+            { title : "Technical Manager", salary: 40000},
+             { title : "Programmer", salary: 2000},
+       
+        ];
+});
+</script>
+
+</body>
+------------------------------------
 
 
 
