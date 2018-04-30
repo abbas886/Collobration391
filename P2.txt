@@ -355,6 +355,153 @@ angular.module('myApp', []).controller('namesCtrl', function($scope) {
 
 
 
+30/04/18
+--------
+This week agenda
+----------------
+1)Start working on Backend project
+2)Designment Documents
+3)Learning Angular JS
+
+
+Today
+-----
+1)Start working on Backend project
+	a)Download Oralce 11G Expression Edition.- DONE
+	b)Create the table  - DONE
+	c)create maven quick start project  - DONE
+	d)hibernate configuration - ApplicationContextConfig  - DONE
+	e)Create Domain Objects - DONE
+	f)Create DAO - Interfaces and DAOImpls - implementation classes
+	g)Write JUnit Testcases for each DAOImpl
+
+
+Backend Project
+---------------
+1)Maven-quick start - Configuration _  DAO/DAOImpl
+2)Spring Boot - 
+	a)Less Configuration
+		i)ApplicatinoContextConfg - not required
+		ii)Using properties file
+			application.properties
+                        ----------------------
+			driver.name = OracleDriver
+			user = system
+			password = root
+			---------------------------
+	d)Embedded Server  (no need to use external server)
+	note:  You need to write main method - you can run as
+			java application
+3)Spring Repository
+	a)You no need to write DAOImpl
+
+
+7 weeks project
+----------------
+1 - week is done.
+
+
+
+Installing Oracle driver manually
+---------------------------------
+
+mvn install:install-file 
+-Dfile=C:/oraclexe/app/oracle/product/11.2.0/server/jdbc/lib/ojdbc6.jar 
+-DgroupId=com.oracle 
+-DartifactId=ojdbc6 
+-Dversion=11.2.0 
+-Dpackaging=jar
+
+path/to/ojdbc6.jar ->  After downloading Oracle Express Edition 
+
+
+password for oracle :  root
+userid :  system
+
+Schema name - colldb
+
+c_user table in oracle
+----------------------
+create table c_user(
+emailid varchar2(20) primary key,
+password varchar2(20) not null,
+name varchar2(30) not null,
+details varchar2(100),
+role char default 'S',
+status char default 'N',
+reason varchar2(100)
+
+)
+
+
+
+
+Cascade on delete
+-----------------
+
+create table c_job
+(
+id number primary key,
+title varchar2(20)not null,
+description varchar2(100),
+qualification varchar2(20),
+salary number,
+status char(10) default 'O',
+no_of_openings number,
+date_posted date default sysdate
+
+)
+
+create table c_job_application
+(
+id number primary key,
+emaildID varchar2(20) references user(id) cascase on delete,
+                                           // on delete set null
+
+
+
+
+Tomorrow : There is no session;
+compensation....5/5/18 - we have class on this saturday
+
+
+Assingment
+----------
+create other tables
+create other domain classes + DAO + DAOImpl + Testcases
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
