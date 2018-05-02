@@ -476,6 +476,10 @@ create other domain classes + DAO + DAOImpl + Testcases
 
 
 
+Errors
+-------
+org.hibernate.LazyInitializationException: 
+could not initialize proxy - no Session
 
 
 

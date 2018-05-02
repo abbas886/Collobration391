@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 
 @Configuration
-@ComponentScan("com.niit.shopingcart")
+@ComponentScan("com.niit")
 @EnableTransactionManagement
 public class ApplicationContextConfig {
 
@@ -25,12 +25,15 @@ public class ApplicationContextConfig {
 	public DataSource getH2DataSource() {
 
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		dataSource.setUrl("jdbc:h2:tcp://localhost/~/shoppingcartdb");
+		//dataSource.setUrl("jdbc:h2:tcp://localhost/~/shoppingcartdb");
+		dataSource.setUrl("jdbc:oracle:thin:@localhost:1521:XE");
+        //jdbc:oracle:thin:@localhost:1521:XE
+		//dataSource.setDriverClassName("org.h2.Driver");
+		dataSource.setDriverClassName("oracle.jdbc.driver.OracleDriver");
+		//oracle.jdbc.driver.OracleDriver
 
-		dataSource.setDriverClassName("org.h2.Driver");
-
-		dataSource.setUsername("sa");
-		dataSource.setPassword("");
+		dataSource.setUsername("colldb"); //schema name
+		dataSource.setPassword("root");
 		
 		
 		return dataSource;
@@ -39,9 +42,11 @@ public class ApplicationContextConfig {
 	
 	private Properties getHibernateProperties() {
 		Properties properties = new Properties();
-		
-		properties.put("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
+		//org.hibernate.dialect.Oracle10gDialect)
+		//properties.put("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
+		properties.put("hibernate.dialect", "org.hibernate.dialect.Oracle10gDialect");
 		properties.put("hibernate.show_sql", "true");
+		properties.put("hibernate.enable_lazy_load_no_trans", "true");
 		return properties;
 	}
 
