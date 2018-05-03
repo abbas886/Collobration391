@@ -20,6 +20,9 @@ public class UserDAOImpl  implements UserDAO {
 	
 	@Autowired
 	private SessionFactory sessionFactory;
+	
+	@Autowired
+	private User user;
 
 	public boolean save(User user) {
 		try {
@@ -51,7 +54,17 @@ public class UserDAOImpl  implements UserDAO {
 
 	public boolean delete(String emaild) {
 		try {
-			sessionFactory.getCurrentSession().delete(emaild, User.class);
+			
+			// before delete, first check whether the record
+			user = get(emaild);
+			//existing or not
+			//if the record does not exist, simply return false;
+			if(user==null)
+			{
+				return false;
+			}
+			//if the record exist, the delete
+			sessionFactory.getCurrentSession().delete(user);
 			return true;
 		} catch (HibernateException e) {
 			// TODO Auto-generated catch block
@@ -60,6 +73,10 @@ public class UserDAOImpl  implements UserDAO {
 		}
 	}
 
+	/**
+	 * will return user object if the record exist
+	 * else it will return null
+	 */
 	public User get(String emailId) {
 	return	(User) sessionFactory.getCurrentSession().get(User.class,emailId);
 	}

@@ -101,8 +101,18 @@ public class UserDAOTestCase {
 	 Assert.assertNotNull("Validate Testcase",userDAO.validate("jaya@gmail.com", "jaya@1234"));
 	}
 	
-	
-	
+	@Test
+	public void deleteUserTestCase()
+	{
+	boolean actual=	   userDAO.delete("jivan@gmail.com");
+	Assert.assertEquals(true, actual);
+	}
+	@Test
+	public void getAllUsers()
+	{
+		int actualSize = userDAO.list().size();
+		Assert.assertEquals(6, actualSize);
+	}
 	
 	
 	

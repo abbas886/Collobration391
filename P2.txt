@@ -482,6 +482,75 @@ org.hibernate.LazyInitializationException:
 could not initialize proxy - no Session
 
 
+03/05/18
+--------
+1)Yesterday:
+
+written few testcases for user module
+
+2)Today:
+
+Write other testcases for user module
+Start another module - job 
+1)create the table  -DONE
+2)create Domain object - DONE
+3)Create DAO Interface and DAOImpl
+4)JUnit Testcases
+
+
+create table c_job
+(
+id int primary key,
+title varchar2(30) not null,
+description clob not null,
+qualification varchar2(20) not null,
+salary int not null,
+status char default 'O',
+no_of_openings int,
+posted_date date default sysdate
+)
+
+
+
+create table c_job_application
+(
+id int primary key,
+emailID varchar2(20) references c_user(emailID),
+jobID int references c_job(id),
+applied_date date not null,
+status char default 'N',
+reason varchar2(100)
+)
+
+
+
+
+
+
+
+connecting to oracle db server
+-------------------------------
+
+1)  Expression edition UI
+
+OR
+
+2) Through command prompt
+	a)Windows->start -> Run SQL Command line
+	b)conn username/password
+		i)conn coldb/root
+	c)select * from tab;   //to know what are all tables exist
+				(syste defined + user defined)
+	
+
+
+
+
+
+
+
+
+
 
 
 
