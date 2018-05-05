@@ -546,6 +546,176 @@ OR
 
 
 
+04/05/18
+----------
+
+Today
+-----
+JobDAO Testcases
+
+
+Sequence generation
+-------------------
+1)In DB, you can create seqeuence
+	create sequence sequance_name
+	(
+            min =1, max=100000, step=1, cycle, cashe
+	)
+2)Hibernate 
+3)
+
+	i)Java - random number
+
+	random number -> range of the random number?
+	-> 0 to 1 -- need t convert into int/long
+        ii)check what is id of last record (max value)
+            add + 1 before saving this record.
+
+
+
+
+Aggregate functions
+--------------------
+max, min, avg, sum, count
+
+
+05/05/18
+-------
+Yeterday:   Job Testcases/JobApplication Test Cases
+
+1)We should not able to apply for Job which is already closed.
+
+
+2)We should not apply for the same job more than once.
+
+
+
+
+Next week :  Spring Rest Services - separate project
+	Integrating with Back end project
+
+
+
+OOP
+---
+data hiding - access specifier + class
+abstraction - hiding implementation - can achieve using interface/abstract class
+Why should hide implementation?
+--they no need to how we implemented
+--polymorphism (different implementation)
+
+In our project
+--------------
+1)created backend project (DAO and DAO Implementation are exist)
+2)going to create spring rest services project.
+
+
+Blog table
+----------
+create table c_blog
+(
+id int primary key,
+title varchar2(100) not null,
+emailID varchar2(20) references c_user(emailID),
+description clob not null,
+createdDate date default sysdate,
+status     char default 'N',
+remarks    char null,
+likes      int default 0,
+unlikes    int default 0
+)
+
+BlogComment
+-----------
+create table c_blog_comment
+(
+id int primary key,
+emailID varchar2(20) references c_user(emailID),
+blogID int  references c_blog(id),
+comments clob not null,
+commentedDate date default sysdate
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

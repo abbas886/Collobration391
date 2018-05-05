@@ -18,10 +18,10 @@ import org.springframework.stereotype.Component;
 public class Job {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	//@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private String title;
-	private Clob description;
+	private String description;
 	private String qualification;
 	private int salary;
 	private char status;
@@ -39,10 +39,10 @@ public class Job {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public Clob getDescription() {
+	public String getDescription() {
 		return description;
 	}
-	public void setDescription(Clob description) {
+	public void setDescription(String description) {
 		this.description = description;
 	}
 	public String getQualification() {

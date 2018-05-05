@@ -24,6 +24,10 @@ public interface JobDAO {
 	
 	public  Job  get(int id);
 	
+	//fetch a particular JobApplication
+	
+	
+	
 	//fetch all jobs
 	
 	public List<Job> list();
@@ -32,6 +36,9 @@ public interface JobDAO {
 	//fetch all the jobs based on status
 	
 	public List<Job> list(char status);
+	
+	
+	public boolean   isJobOpened(int id);
 	
 	
 	
@@ -58,7 +65,7 @@ public interface JobDAO {
 	public  List<JobApplication> list(int jobID,char status);
 	
 	
-	
+	public  boolean isJobAlreadyApplied(String emailID, int jobID);
 	
 	
 	
