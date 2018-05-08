@@ -636,6 +636,87 @@ comments clob not null,
 commentedDate date default sysdate
 )
 
+08/05/18
+---------
+Yesterday :  discussed about webservices
+
+Today:
+create webservice and test
+
+1)create maven-weba-app project
+2)create RestController
+3)Test through postman/restclient (Addons/pluggins in browser)
+
+
+
+
+
+ResponseEntity -> To return the data +  Http status codes - to client
+
+status code --- status message
+------------------------------
+404         -- page not found
+200          -- success (httpstatus.ok)
+
+
+
+Parsers
+--------
+convert one format to another format
+Ex:  JAXB ->  Java APLI for XML Binding
+
+json  <--> java
+
+1)gson
+2)jaskson
+
+1)jackson data bind
+2)jackson core
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
