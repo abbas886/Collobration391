@@ -674,6 +674,164 @@ json  <--> java
 2)jackson core
 
 
+09/05/18
+--------
+Yesterday:
+1)created maven-web-app proect
+2)created rest controller - user
+3)we tested through postman
+
+
+Today:
+1)write other method handler in user controller
+2)Test it.
+
+
+@PostMapping("/user/create")
+public ResponseEntity<User> createUser(@RequestBody User user)
+{
+
+
+
+}
+
+
+
+
+
+Serializable  -  
+-------------
+The objects data will move from one layer to other layer
+-we should store/persist in aflie
+
+How many types of iterfaces in java? and what is the use?
+
+1)Marker interface
+	-which does not have any method declarations
+        Interface InterfaceName
+        {
+	}
+	Example : Serializable,Clonable
+
+2)Functional interface
+	-which has only one method
+	Ex:
+	Runnable   - method run
+	
+
+3)Interface with default implementation
+
+
+Question:  How to know the Class name if you only instance name?
+
+j
+
+1)  if( j instance of JobApplication)
+2) j.getClass
+
+
+There are so many classes are there, we need serialize only few classes
+Model,  DAO, DAOImpl, Controller
+
+JVM will serialize only the class which implements Serialization
+How JVM will know?
+
+public Class User implements Serialization {}
+User u = new User
+
+if( u instance of Serialization)
+{
+
+ // will serialize or store in file
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copy
+----
+1)Deep Copy  - All the properties of one object will copy to other object
+2)Shallow Copy - Both the object names will copy to same location
+
+
+
+10/05/18
+---------
+Job modules
+
+
+1)whenever we try to delete a job, if somebody already applied for
+	the job, we should not able to delete.
+
+2)if the user already applied for any job(s), we should not
+	able to delete the user.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
